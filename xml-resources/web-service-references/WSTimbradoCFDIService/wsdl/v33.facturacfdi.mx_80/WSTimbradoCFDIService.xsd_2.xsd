@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://wservicios/" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://wservicios/">
+
+<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://v33.facturacfdi.mx:80/WSTimbradoCFDIService?xsd=1"/>
+
+<xs:import namespace="http://www.w3.org/2005/05/xmlmime" schemaLocation="http://www.w3.org/2005/05/xmlmime"/>
+<xs:element name="Cancelacion_1" type="tns:Cancelacion_1"/>
+
+<xs:element name="Cancelacion_1Response" type="tns:Cancelacion_1Response"/>
+
+<xs:element name="Cancelacion_2" type="tns:Cancelacion_2"/>
+
+<xs:element name="Cancelacion_2Response" type="tns:Cancelacion_2Response"/>
+
+<xs:element name="TimbrarCFDI" type="tns:TimbrarCFDI"/>
+
+<xs:element name="TimbrarCFDIResponse" type="tns:TimbrarCFDIResponse"/>
+
+<xs:element name="TimbrarZip" type="tns:TimbrarZip"/>
+
+<xs:element name="TimbrarZipResponse" type="tns:TimbrarZipResponse"/>
+
+<xs:complexType name="TimbrarZip">
+<xs:sequence>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+<xs:element name="zip" xmime:expectedContentTypes="application/octet-stream" type="xs:base64Binary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accesos">
+<xs:sequence>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TimbrarZipResponse">
+<xs:sequence>
+<xs:element name="return" xmime:expectedContentTypes="application/octet-stream" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="acuse" type="tns:acuseRecepcionZip" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acuseRecepcionZip">
+<xs:sequence>
+<xs:element name="codigoError" type="xs:string" minOccurs="0"/>
+<xs:element name="error" type="xs:string" minOccurs="0"/>
+<xs:element name="listaCFDIs" type="tns:acuseZip" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="nombrezip" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acuseZip">
+<xs:sequence>
+<xs:element name="error" type="xs:string" minOccurs="0"/>
+<xs:element name="nombrexml" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion_1">
+<xs:sequence>
+<xs:element name="rfcEmisor" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="publicKey" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+<xs:element name="privateKey" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion_1Response">
+<xs:sequence>
+<xs:element name="return" type="tns:wsCancelacionResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsCancelacionResponse">
+<xs:sequence>
+<xs:element name="acuse" type="xs:string" minOccurs="0"/>
+<xs:element name="codEstatus" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="tns:wsFoliosResponse" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wsFoliosResponse">
+<xs:sequence>
+<xs:element name="folio" type="tns:folio" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="folio">
+<xs:sequence>
+<xs:element name="estatusUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion_2">
+<xs:sequence>
+<xs:element name="rfcEmisor" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="folios" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="signatureType" type="ns1:SignatureType" minOccurs="0"/>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Cancelacion_2Response">
+<xs:sequence>
+<xs:element name="return" type="tns:wsCancelacionResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TimbrarCFDI">
+<xs:sequence>
+<xs:element name="accesos" type="tns:accesos" minOccurs="0"/>
+<xs:element name="comprobante" xmime:expectedContentTypes="text/xml" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TimbrarCFDIResponse">
+<xs:sequence>
+<xs:element name="acuseCFDI" type="tns:acuseCFDI" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acuseCFDI">
+<xs:sequence>
+<xs:element name="codigoError" type="xs:string" minOccurs="0"/>
+<xs:element name="error" type="xs:string" minOccurs="0"/>
+<xs:element name="xmlTimbrado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

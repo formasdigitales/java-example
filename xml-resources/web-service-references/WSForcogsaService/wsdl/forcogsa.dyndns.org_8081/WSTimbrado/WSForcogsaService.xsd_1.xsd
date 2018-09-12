@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2. --><xs:schema xmlns:tns="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.w3.org/2000/09/xmldsig#">
+
+<xs:element name="Signature" type="tns:SignatureType" />
+
+<xs:complexType name="SignatureType">
+<xs:sequence>
+<xs:element name="SignedInfo" type="tns:SignedInfoType" minOccurs="0" />
+<xs:element name="SignatureValue" type="xs:base64Binary" minOccurs="0" />
+<xs:element name="KeyInfo" type="tns:KeyInfoType" minOccurs="0" />
+<xs:element name="Object" type="tns:ObjectType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="Id" type="xs:ID" />
+</xs:complexType>
+
+<xs:complexType name="SignedInfoType">
+<xs:sequence>
+<xs:element name="CanonicalizationMethod" type="tns:CanonicalizationMethodType" minOccurs="0" />
+<xs:element name="SignatureMethod" type="tns:SignatureMethodType" minOccurs="0" />
+<xs:element name="Reference" type="tns:ReferenceType" minOccurs="0" />
+</xs:sequence>
+<xs:attribute name="Id" type="xs:ID" />
+</xs:complexType>
+
+<xs:complexType name="CanonicalizationMethodType" mixed="true">
+<xs:sequence>
+<xs:any processContents="lax" namespace="##other" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="Algorithm" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="DigestMethodType" mixed="true">
+<xs:sequence>
+<xs:any processContents="lax" namespace="##other" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="Algorithm" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="X509IssuerSerialType">
+<xs:sequence>
+<xs:element name="X509IssuerName" type="xs:string" minOccurs="0" />
+<xs:element name="X509SerialNumber" type="xs:integer" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TransformType" mixed="true">
+<xs:sequence>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="XPath" type="xs:string" />
+<xs:any processContents="lax" namespace="##other" />
+</xs:choice>
+</xs:sequence>
+<xs:attribute name="Algorithm" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="X509DataType">
+<xs:sequence>
+<xs:element name="X509IssuerSerial" type="tns:X509IssuerSerialType" minOccurs="0" />
+<xs:element name="X509Certificate" type="xs:base64Binary" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SignatureMethodType" mixed="true">
+<xs:sequence>
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="HMACOutputLength" type="xs:integer" />
+<xs:any processContents="lax" namespace="##other" />
+</xs:choice>
+</xs:sequence>
+<xs:attribute name="Algorithm" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="ArrayOfTransformType">
+<xs:sequence>
+<xs:element name="Transform" type="tns:TransformType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ObjectType" mixed="true">
+<xs:sequence>
+<xs:any processContents="lax" namespace="##other" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="Id" type="xs:ID" />
+<xs:attribute name="MimeType" type="xs:string" />
+<xs:attribute name="Encoding" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="ReferenceType">
+<xs:sequence>
+<xs:element name="Transforms" type="tns:ArrayOfTransformType" minOccurs="0" />
+<xs:element name="DigestMethod" type="tns:DigestMethodType" minOccurs="0" />
+<xs:element name="DigestValue" type="xs:base64Binary" minOccurs="0" />
+</xs:sequence>
+<xs:attribute name="Id" type="xs:ID" />
+<xs:attribute name="URI" type="xs:anyURI" />
+<xs:attribute name="Type" type="xs:anyURI" />
+</xs:complexType>
+
+<xs:complexType name="KeyInfoType" mixed="true">
+<xs:sequence>
+<xs:element name="X509Data" type="tns:X509DataType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="Id" type="xs:ID" />
+</xs:complexType>
+</xs:schema>

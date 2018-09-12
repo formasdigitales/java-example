@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://facturacfdi.mx/WSForcogsaService?wsdl" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/facturacfdi.mx/WSForcogsaService.wsdl"/>
+    <system systemId="https://facturacfdi.mx:443/WSForcogsaService?xsd=1" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/facturacfdi.mx_443/WSForcogsaService.xsd_1.xsd"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSForcogsaService?wsdl" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSForcogsaService.wsdl"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSForcogsaService?xsd=1" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSForcogsaService.xsd_1.xsd"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSTimbrado/WSForcogsaService?wsdl" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSTimbrado/WSForcogsaService.wsdl"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSTimbrado/WSForcogsaService?xsd=1" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSTimbrado/WSForcogsaService.xsd_1.xsd"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSTimbrado/WSForcogsaService?xsd=2" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSTimbrado/WSForcogsaService.xsd_2.xsd"/>
+    <system systemId="https://forcogsa.dyndns.org:8081/WSTimbrado/WSForcogsaService?xsd=3" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/forcogsa.dyndns.org_8081/WSTimbrado/WSForcogsaService.xsd_3.xsd"/>
+    <system systemId="https://dev.facturacfdi.mx:8081/WSTimbrado/WSForcogsaService?wsdl" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/dev.facturacfdi.mx_8081/WSTimbrado/WSForcogsaService.wsdl"/>
+    <system systemId="https://dev.facturacfdi.mx:8081/WSTimbrado/WSForcogsaService?xsd=1" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/dev.facturacfdi.mx_8081/WSTimbrado/WSForcogsaService.xsd_1.xsd"/>
+    <system systemId="https://dev.facturacfdi.mx:8081/WSTimbrado/WSForcogsaService?xsd=2" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/dev.facturacfdi.mx_8081/WSTimbrado/WSForcogsaService.xsd_2.xsd"/>
+    <system systemId="https://dev.facturacfdi.mx:8081/WSTimbrado/WSForcogsaService?xsd=3" uri="xml-resources/web-service-references/WSForcogsaService/wsdl/dev.facturacfdi.mx_8081/WSTimbrado/WSForcogsaService.xsd_3.xsd"/>
+    <system systemId="http://v33.facturacfdi.mx:80/WSTimbradoCFDIService?wsdl" uri="xml-resources/web-service-references/WSTimbradoCFDIService/wsdl/v33.facturacfdi.mx_80/WSTimbradoCFDIService.wsdl"/>
+    <system systemId="http://v33.facturacfdi.mx:80/WSTimbradoCFDIService?xsd=1" uri="xml-resources/web-service-references/WSTimbradoCFDIService/wsdl/v33.facturacfdi.mx_80/WSTimbradoCFDIService.xsd_1.xsd"/>
+    <system systemId="http://v33.facturacfdi.mx:80/WSTimbradoCFDIService?xsd=2" uri="xml-resources/web-service-references/WSTimbradoCFDIService/wsdl/v33.facturacfdi.mx_80/WSTimbradoCFDIService.xsd_2.xsd"/>
+    <system systemId="http://v33.facturacfdi.mx:80/WSTimbradoCFDIService?xsd=3" uri="xml-resources/web-service-references/WSTimbradoCFDIService/wsdl/v33.facturacfdi.mx_80/WSTimbradoCFDIService.xsd_3.xsd"/>
+    <system systemId="http://www.w3.org/2005/05/xmlmime" uri="xml-resources/web-service-references/WSTimbradoCFDIService/wsdl/www.w3.org/2005/05/xmlmime.xsd"/>
+</catalog>
