@@ -21,9 +21,10 @@ En el proyecto encontraremos una clase que se llama Principal
         String cfdiTimbrado = principal.timbrar(cfdi);
         System.out.print(cfdiTimbrado);
     }
-```
-
+ ```
 
 Las variables usuario y pass son para el servidor de pruebas, si tienes los tuyos podrias cambiarlos.
-La variable tempXml es el archivo cfdi que no esta timbrado 
+
+La variable tempXml es el archivo cfdi que no esta timbrado.
+
 Las variables certPruebas, keyPruebas y passKey la ruta de nuestro certificado, key y el password de la key, que nos servira para generar nuestro sello digital, para posteriormente enviarlo a nuestro servicio web.
