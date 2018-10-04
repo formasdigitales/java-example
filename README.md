@@ -28,3 +28,6 @@ Las variables usuario y pass son para el servidor de pruebas, si tienes los tuyo
 La variable tempXml es el archivo cfdi que no esta timbrado.
 
 Las variables certPruebas, keyPruebas y passKey la ruta de nuestro certificado, key y el password de la key, que nos servira para generar nuestro sello digital, para posteriormente enviarlo a nuestro servicio web.
+
+
+Para generar las clases de nuestro servicio web, utilizamos netbeans, abrimos el proyecto y nos vamos a la pestaña de servicios y ahi al menu de webservices damos click derecho y seleccionamos Agregar servicio web(Add webservice) nos saldra un cuadro de dialogo y escribimos la url del servicio web y el nombre del paquete escribimos com.wsdlcliente para que genere automaticamente las clases.
