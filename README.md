@@ -1,6 +1,10 @@
 # java-example
 Ejemplo de timbrado con java
 
+##Requerimientos
+* Java 1.8
+
+
 En el proyecto encontraremos una clase que se llama Principal
 
 ```java
@@ -31,3 +35,8 @@ Las variables certPruebas, keyPruebas y passKey la ruta de nuestro certificado, 
 
 
 Para generar las clases de nuestro servicio web, utilizamos netbeans, abrimos el proyecto y nos vamos a la pestaña de servicios y ahi al menu de webservices damos click derecho y seleccionamos Agregar servicio web(Add webservice) nos saldra un cuadro de dialogo y escribimos la url del servicio web y el nombre del paquete escribimos com.wsdlcliente para que genere automaticamente las clases.
+
+* Primero Generamos el cfdi que enviaremos al servicio web, esto se hace en el metodo generateXml. ahi generemos 
+  * La cadena original
+  * El numero de certificado
+  * El certificado en base64. 
