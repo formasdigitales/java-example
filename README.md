@@ -1,8 +1,9 @@
 # java-example
 Ejemplo de timbrado con java
 
-##Requerimientos
+# Requerimientos
 * Java 1.8
+* Netbeans 8+ (opcional)
 
 
 En el proyecto encontraremos una clase que se llama Principal
